@@ -1,0 +1,103 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3961,         95]
+NotebookOptionsPosition[      2767,         71]
+NotebookOutlinePosition[      3194,         88]
+CellTagsIndexPosition[      3151,         85]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\:0418\:043c\:043f\:043e\:0440\:0442\:0438\:0440\:0443\:0435\:043c \
+\:043f\:0430\:043a\:0435\:0442", "Text",
+ FontWeight->"Bold",ExpressionUUID->"10a5dac8-63aa-470b-9789-3c079ca9d90c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$HistoryLength", " ", "=", " ", "0"}], ";"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], " "}], "\n", 
+ RowBox[{"<<", "MaterialsProjectLink`"}]}], "Code",ExpressionUUID->"2844f799-\
+4179-4012-91ae-f71ac3f79b0d"],
+
+Cell["\:0418\:043d\:0444\:043e\:0440\:043c\:0430\:0446\:0438\:044f \:043e \
+\:043f\:0435\:0440\:0432\:043e\:0439 \:043f\:043e\:043f\:0430\:0432\:0448\
+\:0435\:0439\:0441\:044f \:0444\:0443\:043d\:043a\:0446\:0438\:0438", "Text",
+ FontWeight->"Bold",ExpressionUUID->"eceb1d01-9add-47bc-ba85-a8717d8e306a"],
+
+Cell[BoxData[{
+ RowBox[{"?", "MPGetMaterialsByMaterialId"}], "\n", 
+ RowBox[{"Options", "[", "MPGetMaterialsByMaterialId", "]"}]}], "Code",Express\
+ionUUID->"18c3abea-213d-43c6-9287-c525d8947d14"],
+
+Cell["\:041f\:0440\:043e\:0431\:0443\:0435\:043c \:0432\:044b\:0437\:0432\
+\:0430\:0442\:044c", "Text",
+ FontWeight->"Bold",ExpressionUUID->"63e8cbdb-1906-4bbf-8082-81d36589d939"],
+
+Cell[BoxData[
+ RowBox[{"MPGetMaterialsByMaterialId", "[", "\"\<mp-1183412\>\"", 
+  "]"}]], "Code",ExpressionUUID->"08e1f16f-a65e-4c30-b994-f594aa3c9ba3"],
+
+Cell["\:0412\:0441\:0435 \:0434\:043e\:0441\:0442\:0443\:043f\:043d\:044b\
+\:0435 \:043f\:043e\:043b\:044f \:043c\:0430\:0442\:0435\:0440\:0438\:0430\
+\:043b\:0430", "Text",
+ FontWeight->"Bold",ExpressionUUID->"37e3a2fd-d84d-40ba-b105-c4daaa788c5d"],
+
+Cell[BoxData[
+ RowBox[{"MPGetMaterialsByMaterialId", "[", 
+  RowBox[{"\"\<mp-1183412\>\"", ",", " ", 
+   RowBox[{"\"\<allFields\>\"", " ", "->", " ", "True"}]}], "]"}]], "Code",Exp\
+ressionUUID->"eef08a57-1679-46e0-8c20-bb6ed7c48f7f"],
+
+Cell["\:0412\:0441\:0435 \:0434\:043e\:0441\:0442\:0443\:043f\:043d\:044b\
+\:0435 \:0444\:0443\:043d\:043a\:0446\:0438\:0438", "Text",
+ FontWeight->"Bold",ExpressionUUID->"fe1164ef-bbdf-4fc7-99fe-12384e19444c"],
+
+Cell[BoxData[
+ RowBox[{"?", "MaterialsProjectLink`*"}]], "Code",ExpressionUUID->"be8290e4-6edd-4784-80a5-f12fd3081056"]
+},
+WindowSize->{958, 973},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+TrackCellChangeTimes->False,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e6cd1578-22de-4f2e-a8d9-2d52417b6ec0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 191, 2, 35, "Text",ExpressionUUID->"10a5dac8-63aa-470b-9789-3c079ca9d90c"],
+Cell[752, 24, 343, 9, 88, "Code",ExpressionUUID->"2844f799-4179-4012-91ae-f71ac3f79b0d"],
+Cell[1098, 35, 304, 3, 35, "Text",ExpressionUUID->"eceb1d01-9add-47bc-ba85-a8717d8e306a"],
+Cell[1405, 40, 196, 3, 70, "Code",ExpressionUUID->"18c3abea-213d-43c6-9287-c525d8947d14"],
+Cell[1604, 45, 179, 2, 35, "Text",ExpressionUUID->"63e8cbdb-1906-4bbf-8082-81d36589d939"],
+Cell[1786, 49, 153, 2, 52, "Code",ExpressionUUID->"08e1f16f-a65e-4c30-b994-f594aa3c9ba3"],
+Cell[1942, 53, 249, 3, 35, "Text",ExpressionUUID->"37e3a2fd-d84d-40ba-b105-c4daaa788c5d"],
+Cell[2194, 58, 234, 4, 52, "Code",ExpressionUUID->"eef08a57-1679-46e0-8c20-bb6ed7c48f7f"],
+Cell[2431, 64, 210, 2, 35, "Text",ExpressionUUID->"fe1164ef-bbdf-4fc7-99fe-12384e19444c"],
+Cell[2644, 68, 119, 1, 52, "Code",ExpressionUUID->"be8290e4-6edd-4784-80a5-f12fd3081056"]
+}
+]
+*)
+

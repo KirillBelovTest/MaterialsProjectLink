@@ -4,41 +4,25 @@ Materials Project data using Wolfram
 ## Intall
 
 ```wolfram
-PacletInstall["https://github.com/KirillBelovTest/MaterialsProjectLink/releases/download/publish/MaterialsProjectLink-1.0.paclet"]
+PacletInstall["KirillBelov/MaterialsProjectLink"]
 ```
 
 ## Import
 
 ```wolfram
-<<MaterialsProjectLink`
+<<KirillBelov`MaterialsProjectLink`
 ```
 
 ## Available functions
 
 ```wolfram
-?MaterialsProjectLink`*
+?KirillBelov`MaterialsProjectLink`*
 ```
-|   |   |   |
-|---|---|---|
-MPGetAlloys | MPGetAlloysByPairId | MPGetBonds |
-MPGetBondsByMaterialId | MPGetChargeDensity | MPGetChargeDensityByFsId |
-MPGetDielectric | MPGetDielectricByMaterialId | MPGetDoiByTaskId |
-MPGetElasticity | MPGetElasticityByTaskId | MPGetElectronicStructure |
-MPGetElectronicStructureBandstructure | MPGetElectronicStructureBandstructureObject | MPGetElectronicStructureByMaterialId |
-MPGetElectronicStructureDos | MPGetElectronicStructureDosObject | MPGetEos |
-MPGetEosByTaskId | MPGetFermi | MPGetFermiByTaskId |
-MPGetGrainBoundary | MPGetInsertionElectrodes | MPGetInsertionElectrodesByBatteryId |
-MPGetMagnetism | MPGetMagnetismByMaterialId | MPGetMaterials |
-MPGetMaterialsByMaterialId | MPGetMaterialsFormulaAutocomplete | MPGetMolecules |
-MPGetMoleculesByTaskId | MPGetMpcomplete | MPGetMpcompleteBySubmissionId |
-MPGetOxidationStates | MPGetOxidationStatesByMaterialId | MPGetPhononByMaterialId |
-MPGetPiezoelectric | MPGetPiezoelectricByMaterialId | MPGetProvenance |
-MPGetProvenanceByMaterialId | MPGetRobocrys | MPGetRobocrysByMaterialId |
-MPGetRobocrysTextSearch | MPGetSimilarityByMaterialId | MPGetSubstrates |
-MPGetSummary | MPGetSummaryByMaterialId | MPGetSummaryStats |
-MPGetSurfaceProperties | MPGetSurfacePropertiesByTaskId | MPGetSynthesis |
-MPGetTasks | MPGetTasksByTaskId | MPGetTasksDeprecation |
-MPGetTasksEntries | MPGetTasksEntriesByTaskId | MPGetTasksTrajectory |
-MPGetTasksTrajectoryByTaskId | MPGetThermo | MPGetThermoByMaterialId |
-MPGetThermoPhaseDiagramByChemsys | MPGetXas | MPGetXasBySpectrumId |
-MPPostMaterialsFindStructure | MPPostMpcomplete |  |
+
+# Basic examples
+
+```wolfram
+Dataset[getSummaryByMaterialId["mp-149", allFields -> True][["data", 1]]]
+```
+
+![image](https://user-images.githubusercontent.com/16749283/206146214-eee4ff08-e894-4b88-a6c2-5bbcf9674056.png)

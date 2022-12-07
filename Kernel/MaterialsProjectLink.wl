@@ -4,9 +4,6 @@
 (*Materials Project Link*)
 
 
-(*:Dev: Kirill Belov*)
-
-
 (* ::Section:: *)
 (*Begin*)
 
@@ -24,14 +21,10 @@ Begin["`Private`"]
 (*Base request executer*)
 
 
-directory = 
-DirectoryName[$InputFileName]
-
-
-With[{dir = directory}, Options[materialsProjectRequest] = {
-	"APIKey" :> Get[FileNameJoin[{dir, ".MaterialsProjectLink"}]]["APIKey"], 
+Options[materialsProjectRequest] = {
+	"APIKey" :> Get[FileNameJoin[{$HomeDirectory, ".MaterialsProjectLinkAPIKey.wl"}]]["APIKey"], 
 	"Endpoint" -> "https://api.materialsproject.org"
-}]; 
+}; 
 
 
 materialsProjectRequest[{pathTemp_String, httpMethod_String, 
@@ -40,7 +33,8 @@ Module[{apiKey, endpoint, path, url, request, response, body, result},
 	apiKey = OptionValue["APIKey"]; 
 	endpoint = OptionValue["Endpoint"]; 
 	path = If[Length[{pathParams}] > 0, StringReplace[pathTemp, {pathParams}], pathTemp]; 
-	url = URLBuild[{endpoint, path}, DeleteCases[{queryParams}, _[_, Null|Automatic]]]; 
+	url = URLBuild[{endpoint, path}, DeleteCases[{queryParams}, _[_, Null|Automatic]] /. 
+		{arr: {__String} :> StringRiffle[arr, ","]}]; 
 	request = If[Length[{bodyParams}] != 0, 
 		HTTPRequest[url, <|
 			Method -> httpMethod, 
@@ -73,7 +67,7 @@ Module[{apiKey, endpoint, path, url, request, response, body, result},
 
 
 openapiFile = 
-FileNameJoin[{DirectoryName[$InputFileName], "MaterialsProjectLink.json"}]
+FileNameJoin[{ParentDirectory[DirectoryName[$InputFileName]], "MaterialsProjectLink.json"}]
 
 
 openapi = If[FileExistsQ[openapiFile], 
@@ -110,7 +104,7 @@ pathToSymbol[httpMethod_String, path_String] :=
 	Map[StringSplit[#, ""]&] @ 
 	StringSplit[#, "/"]& @ 
 	StringJoin[
-		"MaterialsProjectLink`MP/", httpMethod, 
+		"KirillBelov`MaterialsProjectLink`", httpMethod, 
 		StringReplace[StringReplace[path, "{" ~~ param__ ~~ "}" :> "by/" <> param], "_" -> "/"]
 	]
 

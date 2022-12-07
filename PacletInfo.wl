@@ -5,8 +5,8 @@ PacletObject[<|
 	"Description" -> "Wolfram functions for calling Materials Project Rest API", 
 	"Creator" -> "Kirill Belov", 
 	"License" -> "MIT", 
-	"Version" -> "1.0.1", 
-	"WolframVersion" -> "13.0+", 
+	"Version" -> "1.0.2", 
+	"WolframVersion" -> "13+", 
 	"PublisherID" -> "KirillBelov", 
 	"Extensions" -> {
 		{
